@@ -4,8 +4,7 @@ services:
   # Image is a blueprint of the data
     image: "postgres:latest"
     environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "Pa55W0rD!"
-      POSTGRES_DB: ""
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Pa55W0rD!"
     ports:
       - "5432:5432"
