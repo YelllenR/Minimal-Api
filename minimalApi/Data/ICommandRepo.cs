@@ -6,7 +6,7 @@ namespace minimalApi.Data
     public interface ICommandRepo
     {
         //Defining an async method that return a task - is a method signature
-        Task SaveChanges();
+        Task SaveChangesAsync();
         Task<Command?> GetCommandById(int id);
         Task<IEnumerable<Command>> GetAllCommands();
         Task CreateCommand(Command cmd);
