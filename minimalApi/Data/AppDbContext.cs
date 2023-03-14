@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using minimalApi.Dtos;
+using minimalApi.Models;
 
 namespace minimalApi.Data
 {
@@ -10,7 +10,8 @@ namespace minimalApi.Data
             
         }
         public DbSet<Command> Commands => Set<Command>(); 
-        
+
+        //Configuration for postgres
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseNpgsql("Host=localhost;Database=minimalApiv2;Username=postgres;Password=0805");
     }
