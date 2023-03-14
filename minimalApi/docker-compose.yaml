@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  PostgreSQL:
+  # Image is a blueprint of the data
+    image: "postgres:latest"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Pa55W0rD!"
+    ports:
+      - "5432:5432"
